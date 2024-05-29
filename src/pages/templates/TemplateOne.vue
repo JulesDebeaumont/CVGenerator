@@ -155,6 +155,7 @@ const propsComponents = defineProps<{
                 </div>
               </div>
             </div>
+
             <div class="Table-fvgclz-16 ixuQlm">
               <div
                 width="950"
@@ -560,6 +561,7 @@ const propsComponents = defineProps<{
 <style scoped>
 body {
   margin: 0;
+  padding: 0;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }

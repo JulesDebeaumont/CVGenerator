@@ -268,7 +268,7 @@ onMounted(() => {
           <component
             :is="templateSelected.component"
             :configuration="editedConfiguration"
-            style="width: 950px; min-height: 1200px;"
+            style="width: 950px; min-height: 1200px"
           />
         </template>
       </div>
@@ -288,6 +288,11 @@ onMounted(() => {
   }
   @page {
     margin: 0;
+    padding: 0;
+  }
+  .printable {
+    width: 950px;
+    overflow: hidden;
   }
 }
 @page {
