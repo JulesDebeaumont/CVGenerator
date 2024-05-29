@@ -155,7 +155,7 @@ watch(templateSelected, () => {
 // lifeCycle
 onMounted(() => {
   templateSelected.value = templatesAvailable.at(0) as ITemplate;
-})
+});
 </script>
 
 <template>
@@ -263,13 +263,12 @@ onMounted(() => {
         </q-tab-panels>
       </div>
 
-      <div class="flex">
+      <div class="flex" id="preview-container">
         <template v-if="templateSelected !== null">
           <component
             :is="templateSelected.component"
             :configuration="editedConfiguration"
-            style="width: 950px"
-            id="preview-container"
+            style="width: 950px; min-height: 1200px;"
           />
         </template>
       </div>

@@ -13,7 +13,6 @@ const propsComponents = defineProps<{
       <div
         scale="1.1687657430730478"
         class="DocumentWrapper-djzk4v-0 dMGnIh"
-        height="1643"
       >
         <section
           id="preview-template"
@@ -628,7 +627,6 @@ p {
   position: relative;
   height: inherit;
   width: 950px;
-  min-height: 1312.52px;
 }
 
 .eUAUnI {
@@ -721,8 +719,6 @@ p {
 .dMGnIh {
   position: relative;
   transform-origin: left top;
-  height: 1550px;
-  min-height: 1312.52px;
   user-select: none;
 }
 
