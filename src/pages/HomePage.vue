@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { IConfiguration, ITemplate } from 'src/components/models';
 import { inputStyle } from 'src/utils/configuration';
-import { ref, watch } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { QFileProps, uid } from 'quasar';
 // components
 import TemplateOne from 'src/pages/templates/TemplateOne.vue';
@@ -130,21 +130,15 @@ async function importConfig() {
   }
 }
 function downloadPdf() {
-  const element = document.createElement('a');
-  element.setAttribute(
-    'href',
-    'application/pdf' + encodeURIComponent('') // TODO jspdf ?
-  );
-  element.setAttribute('download', getCvFilename());
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
-}
-function getCvFilename() {
-  return `${editedConfiguration.value.family_name}_${editedConfiguration.value.name}.pdf`
-    .replaceAll(' ', '')
-    .replaceAll('.', '');
+  const elementToPrint = document.getElementById('preview-container');
+  if (elementToPrint === null) {
+    return;
+  }
+  const cloned = elementToPrint.cloneNode(true) as HTMLElement;
+  document.body.appendChild(cloned);
+  cloned.classList.add('printable');
+  window.print();
+  document.body.removeChild(cloned);
 }
 function getConfigFilename() {
   return `${uid()}.json`;
@@ -157,6 +151,11 @@ watch(templateSelected, () => {
   }
   editedConfiguration.value.colors = templateSelected.value.defaultColors;
 });
+
+// lifeCycle
+onMounted(() => {
+  templateSelected.value = templatesAvailable.at(0) as ITemplate;
+})
 </script>
 
 <template>
@@ -229,14 +228,16 @@ watch(templateSelected, () => {
     </div>
 
     <div class="flex row full-width q-pt-md main-container">
-      <div class="flex row no-wrap items-start q-pb-md q-pr-md col editor-container">
+      <div
+        class="flex row no-wrap items-start q-pb-md q-pr-md col editor-container"
+      >
         <q-tabs
           v-model="tabSelected"
           vertical
           class="text-info bg-dark"
           active-color="secondary"
           no-caps
-          style="height: inherit;"
+          style="height: inherit"
         >
           <q-tab
             v-for="tab in availableTabs"
@@ -262,12 +263,13 @@ watch(templateSelected, () => {
         </q-tab-panels>
       </div>
 
-      <div class="flex preview-container">
+      <div class="flex">
         <template v-if="templateSelected !== null">
           <component
             :is="templateSelected.component"
             :configuration="editedConfiguration"
-            style="width: 950px;"
+            style="width: 950px"
+            id="preview-container"
           />
         </template>
       </div>
@@ -279,6 +281,17 @@ watch(templateSelected, () => {
 @media screen and (max-width: 1600px) {
   .main-container {
     flex-direction: column;
+  }
 }
+@media print {
+  body *:not(.printable, .printable *) {
+    display: none;
+  }
+  @page {
+    margin: 0;
+  }
+}
+@page {
+  margin: 0;
 }
 </style>

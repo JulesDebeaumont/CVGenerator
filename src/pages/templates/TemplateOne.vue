@@ -97,8 +97,8 @@ const propsComponents = defineProps<{
                     <div
                       class="Text-sc-1men39j-0 Text-n28ss1-0 DetailsText-fvgclz-6 PxDX gjIHaU dFFqgd"
                     >
+                    {{ propsComponents.configuration.postal_code }}
                       {{ propsComponents.configuration.city }}
-                      {{ propsComponents.configuration.postal_code }}
                     </div>
                   </div>
                   <div
@@ -360,6 +360,7 @@ const propsComponents = defineProps<{
                   class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 iFZZvl kZOPfA"
                 >
                   <div
+                  v-if="(propsComponents.configuration.description?.length ?? 0) > 0"
                     class="View-sc-8b83af-0 SummaryContainer-fvgclz-14 fAlNti bHYPfM"
                   >
                     <div
