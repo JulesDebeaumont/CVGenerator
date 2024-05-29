@@ -10,7 +10,7 @@
 
 
 const { configure } = require('quasar/wrappers');
-
+const publicPath = '/CVGenerator/';
 
 module.exports = configure(function (/* ctx */) {
   return {
@@ -67,9 +67,9 @@ module.exports = configure(function (/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      // publicPath: '/',
+      publicPath: publicPath,
       // analyze: true,
-      // env: {},
+      env: { publicPath },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
