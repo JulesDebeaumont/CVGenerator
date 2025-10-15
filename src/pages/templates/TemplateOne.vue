@@ -10,7 +10,7 @@ const propsComponents = defineProps<{
 <template>
   <div class="PreviewContent-sc-1qqn6ti-1 khjSes">
     <div class="Preview-sc-1qqn6ti-2 ljkwRc">
-      <div scale="1.1687657430730478" class="DocumentWrapper-djzk4v-0 dMGnIh" height="1643">
+      <div scale="1.1687657430730478" class="DocumentWrapper-djzk4v-0 dMGnIh">
         <section id="preview-template" scale="1.1687657430730478" width="950" class="Document-mtv77t-0 eUAUnI">
           <section width="950" class="Page-sc-1bv3d3r-0 Page-fvgclz-1 hMXRcy fefVOb">
             <div class="View-sc-8b83af-0 Header-fvgclz-2 fAlNti gWVUHA"
@@ -48,8 +48,8 @@ const propsComponents = defineProps<{
                       </svg>
                     </div>
                     <div class="Text-sc-1men39j-0 Text-n28ss1-0 DetailsText-fvgclz-6 PxDX gjIHaU dFFqgd">
-                      {{ propsComponents.configuration.city }}
                       {{ propsComponents.configuration.postal_code }}
+                      {{ propsComponents.configuration.city }}
                     </div>
                   </div>
                   <div class="View-sc-8b83af-0 DetailsItem-fvgclz-5 fAlNti gCQHbH">
@@ -81,6 +81,7 @@ const propsComponents = defineProps<{
                 </div>
               </div>
             </div>
+
             <div class="Table-fvgclz-16 ixuQlm">
               <div width="950" data-rbd-droppable-id="left" data-rbd-droppable-context-id="0"
                 class="LeftColumn-fvgclz-17 fhmDQj"
@@ -145,8 +146,7 @@ const propsComponents = defineProps<{
                     </div>
 
                     <div class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB">
-                      <template v-for="formation in propsComponents.configuration
-                        .formations" :key="formation">
+                      <template v-for="formation in propsComponents.configuration.formations" :key="formation">
                         <div class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 gQyFmb jhwqAS">
                           <div
                             class="View-sc-8b83af-0 BlockNestedItem-d8icj2-0 NestedBlock-sc-1gpqjpb-4 fAlNti bwFrjN RnXzU">
@@ -158,7 +158,8 @@ const propsComponents = defineProps<{
                               <div
                                 class="Text-sc-1men39j-0 Text-n28ss1-0 Text-sc-1gpqjpb-1 School-sc-1gpqjpb-2 PxDX gjIHaU HgiFH text-left"
                                 :style="`color: ${propsComponents.configuration.colors.two}`">
-                                {{ [formation.place, formation.city, formation.year].join(' / ') }}
+                                {{[formation.place, formation.city, formation.year].filter(entry => !!entry).join(' / ')
+                                }}
                               </div>
                               <div class="Description-sc-1gpqjpb-3 kUwWgn">
                                 <div class="ParsedTextContainer-sc-6nbsq0-0">
@@ -186,6 +187,7 @@ const propsComponents = defineProps<{
                               </div>
                             </div>
                           </div>
+                        </div>
                       </template>
                     </div>
                   </div>
@@ -211,7 +213,8 @@ const propsComponents = defineProps<{
               <div width="950" data-rbd-droppable-id="right" data-rbd-droppable-context-id="0"
                 class="RightColumn-fvgclz-18 liTozq">
                 <div class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 iFZZvl kZOPfA">
-                  <div class="View-sc-8b83af-0 SummaryContainer-fvgclz-14 fAlNti bHYPfM">
+                  <div v-if="(propsComponents.configuration.description?.length ?? 0) > 0"
+                    class="View-sc-8b83af-0 SummaryContainer-fvgclz-14 fAlNti bHYPfM">
                     <div class="Text-sc-1men39j-0 Text-n28ss1-0 Summary-fvgclz-15 PxDX gjIHaU hyPhbj">
                       <div class="ParsedTextContainer-sc-6nbsq0-0">
                         <div class="UnbreakableView-g0hv7p-0 gQyFmb">
@@ -248,13 +251,13 @@ const propsComponents = defineProps<{
                               <div class="Column-sc-3wzo5k-6 dItcKI">
                                 <div
                                   class="Text-sc-1men39j-0 Text-n28ss1-0 Employer-sc-3wzo5k-3 StyledText-sc-3wzo5k-7 PxDX gjIHaU jnZfmN jxCRvk text-left">
-                                  {{ [experience.place, experience.city].join(' - ') }}
+                                  {{[experience.place, experience.city].filter(entry => !!entry).join(' - ')}}
                                 </div>
                                 <div class="SpaceWrapper-sc-3wzo5k-8 iXnHaz">
                                   <div
                                     class="Text-sc-1men39j-0 Text-n28ss1-0 DateComp-sc-1hqshvs-0 PxDX gjIHaU fcBLqD text-left"
                                     :style="`color: ${propsComponents.configuration.colors.two}`">
-                                    {{ [experience.start, experience.end].join(' - ') }}
+                                    {{[experience.start, experience.end].filter(entry => !!entry).join(' - ')}}
                                   </div>
                                   <div
                                     class="Text-sc-1men39j-0 Text-n28ss1-0 Employer-sc-3wzo5k-3 StyledText-sc-3wzo5k-7 Devider-sc-3wzo5k-9 PxDX gjIHaU jnZfmN fbuwqy fdbOqK"
@@ -345,6 +348,7 @@ const propsComponents = defineProps<{
 <style scoped>
 body {
   margin: 0;
+  padding: 0;
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
@@ -414,7 +418,6 @@ p {
   position: relative;
   height: inherit;
   width: 950px;
-  min-height: 1312.52px;
 }
 
 .eUAUnI {
@@ -507,8 +510,6 @@ p {
 .dMGnIh {
   position: relative;
   transform-origin: left top;
-  height: 1550px;
-  min-height: 1312.52px;
   user-select: none;
 }
 
@@ -1482,12 +1483,14 @@ p {
 
 .fAqTNX {
   color: rgb(255, 255, 255);
-  font-size: 35px;
+  font-size: 28px;
   text-align: center;
   line-height: 1;
   letter-spacing: 10.5189px;
   border: none;
   padding: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-bottom: 20px;
 }
 

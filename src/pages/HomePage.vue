@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { IConfiguration, ITemplate } from 'src/components/models';
 import { inputStyle } from 'src/utils/configuration';
-import { ref, watch } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { QFileProps, uid } from 'quasar';
 // components
 import TemplateOne from 'src/pages/templates/TemplateOne.vue';
@@ -103,7 +103,7 @@ function downloadConfig() {
   element.setAttribute(
     'href',
     'data:text/plain;charset=utf-8,' +
-      encodeURIComponent(JSON.stringify(editedConfiguration.value))
+    encodeURIComponent(JSON.stringify(editedConfiguration.value))
   );
   element.setAttribute('download', getConfigFilename());
   element.style.display = 'none';
@@ -130,16 +130,15 @@ async function importConfig() {
   }
 }
 function downloadPdf() {
-  const contentToPrint = document.getElementById('pdf-element')?.innerHTML;
-  const printWindow = window.open('', 'pdf-element');
-  if (printWindow === null || contentToPrint === undefined) {
+  const elementToPrint = document.getElementById('preview-container');
+  if (elementToPrint === null) {
     return;
   }
-  const cssContent = '<style>' + getallcss() + '</style>';
-  printWindow.document.write(contentToPrint);
-  printWindow.document.write(cssContent);
-  printWindow.focus();
-  printWindow.print();
+  const cloned = elementToPrint.cloneNode(true) as HTMLElement;
+  document.body.appendChild(cloned);
+  cloned.classList.add('printable');
+  window.print();
+  document.body.removeChild(cloned);
 }
 function getConfigFilename() {
   return `${uid()}.json`;
@@ -152,6 +151,11 @@ watch(templateSelected, () => {
   }
   editedConfiguration.value.colors = templateSelected.value.defaultColors;
 });
+
+// lifeCycle
+onMounted(() => {
+  templateSelected.value = templatesAvailable.at(0) as ITemplate;
+});
 </script>
 
 <template>
@@ -163,110 +167,46 @@ watch(templateSelected, () => {
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          <q-file
-            v-bind="inputStyle"
-            v-model="importFile"
-            accept=".json"
-            label="Fichier de configuration"
-          />
+          <q-file v-bind="inputStyle" v-model="importFile" accept=".json" label="Fichier de configuration" />
         </q-card-section>
 
         <q-card-actions align="between">
           <q-btn flat label="Annuler" v-close-popup no-caps color="positive" />
-          <q-btn
-            flat
-            label="Importer"
-            v-close-popup
-            no-caps
-            color="positive"
-            @click="importConfig"
-          />
+          <q-btn flat label="Importer" v-close-popup no-caps color="positive" @click="importConfig" />
         </q-card-actions>
       </q-card>
     </q-dialog>
 
     <div class="flex row items-center full-width justify-between">
-      <q-select
-        v-bind="inputStyle"
-        v-model="templateSelected"
-        :options="templatesAvailable"
-        map-options
-        emit-value
-        option-label="name"
-        label="Template"
-        style="max-width: 300px"
-      />
+      <q-select v-bind="inputStyle" v-model="templateSelected" :options="templatesAvailable" map-options emit-value
+        option-label="name" label="Template" style="max-width: 300px" />
 
       <div class="flex row items-center">
-        <q-btn
-          @click="dialogImport = true"
-          label="Importer"
-          no-caps
-          color="positive"
-          class="q-ml-md"
-        />
-        <q-btn
-          @click="downloadConfig"
-          label="Exporter"
-          no-caps
-          color="positive"
-          class="q-ml-md"
-        />
-        <q-btn
-          v-if="templateSelected !== null"
-          @click="downloadPdf"
-          label="Télécharger"
-          no-caps
-          color="positive"
-          class="q-ml-md"
-        />
+        <q-btn @click="dialogImport = true" label="Importer" no-caps color="positive" class="q-ml-md" />
+        <q-btn @click="downloadConfig" label="Exporter" no-caps color="positive" class="q-ml-md" />
+        <q-btn v-if="templateSelected !== null" @click="downloadPdf" label="Télécharger" no-caps color="positive"
+          class="q-ml-md" />
       </div>
     </div>
 
     <div class="flex row full-width q-pt-md main-container">
-      <div
-        class="flex row no-wrap items-start q-pb-md q-pr-md col editor-container"
-      >
-        <q-tabs
-          v-model="tabSelected"
-          vertical
-          class="text-info bg-dark"
-          active-color="secondary"
-          no-caps
-          style="height: inherit"
-        >
-          <q-tab
-            v-for="tab in availableTabs"
-            :key="tab.name"
-            :name="tab.name"
-            :label="tab.label"
-            :icon="tab.icon"
-          />
+      <div class="flex row no-wrap items-start q-pb-md q-pr-md col editor-container">
+        <q-tabs v-model="tabSelected" vertical class="text-info bg-dark" active-color="secondary" no-caps
+          style="height: inherit">
+          <q-tab v-for="tab in availableTabs" :key="tab.name" :name="tab.name" :label="tab.label" :icon="tab.icon" />
         </q-tabs>
 
         <q-tab-panels v-model="tabSelected" animated class="full-width">
-          <q-tab-panel
-            v-for="tab in availableTabs"
-            :key="tab.name"
-            :name="tab.name"
-            class="bg-dark"
-          >
-            <component
-              :is="tab.component"
-              :configuration="editedConfiguration"
-            />
+          <q-tab-panel v-for="tab in availableTabs" :key="tab.name" :name="tab.name" class="bg-dark">
+            <component :is="tab.component" :configuration="editedConfiguration" />
           </q-tab-panel>
         </q-tab-panels>
       </div>
 
-      <div class="flex preview-container">
+      <div class="flex" id="preview-container">
         <template v-if="templateSelected !== null">
-          <component
-            :is="templateSelected.component"
-            :configuration="editedConfiguration"
-            style="width: 950px"
-            id="pdf-element"
-          />
+          <component :is="templateSelected.component" :configuration="editedConfiguration"
+            style="width: 950px; min-height: 1200px" id="pdf-element" />
         </template>
       </div>
     </div>
@@ -278,5 +218,25 @@ watch(templateSelected, () => {
   .main-container {
     flex-direction: column;
   }
+}
+
+@media print {
+  body *:not(.printable, .printable *) {
+    display: none;
+  }
+
+  @page {
+    margin: 0;
+    padding: 0;
+  }
+
+  .printable {
+    width: 950px;
+    overflow: hidden;
+  }
+}
+
+@page {
+  margin: 0;
 }
 </style>
