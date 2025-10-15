@@ -130,21 +130,16 @@ async function importConfig() {
   }
 }
 function downloadPdf() {
-  const element = document.createElement('a');
-  element.setAttribute(
-    'href',
-    'application/pdf' + encodeURIComponent('') // TODO jspdf ?
-  );
-  element.setAttribute('download', getCvFilename());
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
-}
-function getCvFilename() {
-  return `${editedConfiguration.value.family_name}_${editedConfiguration.value.name}.pdf`
-    .replaceAll(' ', '')
-    .replaceAll('.', '');
+  const contentToPrint = document.getElementById('pdf-element')?.innerHTML;
+  const printWindow = window.open('', 'pdf-element');
+  if (printWindow === null || contentToPrint === undefined) {
+    return;
+  }
+  const cssContent = '<style>' + getallcss() + '</style>';
+  printWindow.document.write(contentToPrint);
+  printWindow.document.write(cssContent);
+  printWindow.focus();
+  printWindow.print();
 }
 function getConfigFilename() {
   return `${uid()}.json`;
@@ -229,14 +224,16 @@ watch(templateSelected, () => {
     </div>
 
     <div class="flex row full-width q-pt-md main-container">
-      <div class="flex row no-wrap items-start q-pb-md q-pr-md col editor-container">
+      <div
+        class="flex row no-wrap items-start q-pb-md q-pr-md col editor-container"
+      >
         <q-tabs
           v-model="tabSelected"
           vertical
           class="text-info bg-dark"
           active-color="secondary"
           no-caps
-          style="height: inherit;"
+          style="height: inherit"
         >
           <q-tab
             v-for="tab in availableTabs"
@@ -267,7 +264,8 @@ watch(templateSelected, () => {
           <component
             :is="templateSelected.component"
             :configuration="editedConfiguration"
-            style="width: 950px;"
+            style="width: 950px"
+            id="pdf-element"
           />
         </template>
       </div>
@@ -279,6 +277,6 @@ watch(templateSelected, () => {
 @media screen and (max-width: 1600px) {
   .main-container {
     flex-direction: column;
-}
+  }
 }
 </style>

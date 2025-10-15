@@ -10,146 +10,71 @@ const propsComponents = defineProps<{
 <template>
   <div class="PreviewContent-sc-1qqn6ti-1 khjSes">
     <div class="Preview-sc-1qqn6ti-2 ljkwRc">
-      <div
-        scale="1.1687657430730478"
-        class="DocumentWrapper-djzk4v-0 dMGnIh"
-        height="1643"
-      >
-        <section
-          id="preview-template"
-          scale="1.1687657430730478"
-          width="950"
-          class="Document-mtv77t-0 eUAUnI"
-        >
-          <section
-            width="950"
-            class="Page-sc-1bv3d3r-0 Page-fvgclz-1 hMXRcy fefVOb"
-          >
-            <div
-              class="View-sc-8b83af-0 Header-fvgclz-2 fAlNti gWVUHA"
-              :style="`background-color: ${propsComponents.configuration.colors.one}`"
-            >
-              <div
-                class="View-sc-8b83af-0 HeaderContent-fvgclz-3 fAlNti lkKBwP"
-              >
-                <div
-                  class="Text-sc-1men39j-0 Heading-fdlt8e-0 Name-fvgclz-7 PxDX eLhXUb fAqTNX"
-                >
+      <div scale="1.1687657430730478" class="DocumentWrapper-djzk4v-0 dMGnIh" height="1643">
+        <section id="preview-template" scale="1.1687657430730478" width="950" class="Document-mtv77t-0 eUAUnI">
+          <section width="950" class="Page-sc-1bv3d3r-0 Page-fvgclz-1 hMXRcy fefVOb">
+            <div class="View-sc-8b83af-0 Header-fvgclz-2 fAlNti gWVUHA"
+              :style="`background-color: ${propsComponents.configuration.colors.one}`">
+              <div class="View-sc-8b83af-0 HeaderContent-fvgclz-3 fAlNti lkKBwP">
+                <div class="Text-sc-1men39j-0 Heading-fdlt8e-0 Name-fvgclz-7 PxDX eLhXUb fAqTNX">
                   {{ propsComponents.configuration.name }}
                   {{ propsComponents.configuration.family_name }}
                 </div>
-                <div
-                  class="View-sc-8b83af-0 TitleContainer-fvgclz-10 fAlNti gYfpB"
-                >
-                  <div
-                    class="View-sc-8b83af-0 TitleLine-fvgclz-11 fAlNti eCCASE"
-                    :style="`background-color: ${propsComponents.configuration.colors.two}`"
-                  ></div>
-                  <div
-                    class="Text-sc-1men39j-0 Heading-fdlt8e-0 Title-fvgclz-9 PxDX eLhXUb eSoDqt"
-                    :style="`color: ${propsComponents.configuration.colors.two}`"
-                  >
+                <div class="View-sc-8b83af-0 TitleContainer-fvgclz-10 fAlNti gYfpB">
+                  <div class="View-sc-8b83af-0 TitleLine-fvgclz-11 fAlNti eCCASE"
+                    :style="`background-color: ${propsComponents.configuration.colors.two}`"></div>
+                  <div class="Text-sc-1men39j-0 Heading-fdlt8e-0 Title-fvgclz-9 PxDX eLhXUb eSoDqt"
+                    :style="`color: ${propsComponents.configuration.colors.two}`">
                     {{ propsComponents.configuration.job_title }}
                   </div>
-                  <div
-                    class="View-sc-8b83af-0 TitleLine-fvgclz-11 fAlNti eCCASE"
-                    :style="`background-color: ${propsComponents.configuration.colors.two}`"
-                  ></div>
+                  <div class="View-sc-8b83af-0 TitleLine-fvgclz-11 fAlNti eCCASE"
+                    :style="`background-color: ${propsComponents.configuration.colors.two}`"></div>
                 </div>
                 <div class="View-sc-8b83af-0 Details-fvgclz-4 fAlNti ibsdMc">
-                  <div
-                    class="View-sc-8b83af-0 DetailsItem-fvgclz-5 fAlNti gCQHbH"
-                  >
-                    <div
-                      class="View-sc-8b83af-0 IconCont-fvgclz-25 fAlNti KYCjT"
-                    >
-                      <svg
-                        width="20px"
-                        height="26px"
-                        viewBox="0 0 20 26"
-                        class="SvgIcon-sc-4nubd9-0 dinupF"
-                        :style="`fill: ${propsComponents.configuration.colors.two}`"
-                      >
-                        <g
-                          id="Page-1"
-                          stroke="none"
-                          stroke-width="1"
-                          fill-rule="evenodd"
-                        >
-                          <g
-                            id="Riga-Add-Info"
-                            transform="translate(-202.000000, -214.000000)"
-                            class="StyledG-sc-4nubd9-1"
-                          >
-                            <g
-                              id="Group-5"
-                              transform="translate(84.000000, 214.000000)"
-                            >
+                  <div class="View-sc-8b83af-0 DetailsItem-fvgclz-5 fAlNti gCQHbH">
+                    <div class="View-sc-8b83af-0 IconCont-fvgclz-25 fAlNti KYCjT">
+                      <svg width="20px" height="26px" viewBox="0 0 20 26" class="SvgIcon-sc-4nubd9-0 dinupF"
+                        :style="`fill: ${propsComponents.configuration.colors.two}`">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                          <g id="Riga-Add-Info" transform="translate(-202.000000, -214.000000)"
+                            class="StyledG-sc-4nubd9-1">
+                            <g id="Group-5" transform="translate(84.000000, 214.000000)">
                               <path
                                 d="M132.783,18.134 C132.606,18.432 132.222,18.755 132.021,19.077 C131.72,19.562 131.373,20.064 131.072,20.568 C129.97,22.296 128.847,24.087 127.715,25.858 C125.889,23.147 124.042,20.433 122.261,17.672 C120.61,15.101 118.395,12.363 118.043,9.789 C118.021163,9.56821652 118.006822,9.34675586 118,9.125 L118,8.022 C118.63,2.621 123.321,1.13686838e-13 127.58,1.13686838e-13 C130.765,1.13686838e-13 134.706,1.426 136.511,5.401 C136.663,5.725 136.863,6.091 136.964,6.436 C136.989,6.506 137.423,7.628 137.423,7.953 L137.423,9.17 C137.423,12.135 134.56,15.144 132.783,18.134 L132.783,18.134 Z M127.766,5.356 C126.14,5.356 124.267,6.277 124.267,8.294 L124.267,9.008 C124.267,9.055 124.259,9.56 124.36,9.814 C125.037,11.405 126.408,11.975 127.66,11.975 C129.667,11.975 131.321,10.504 131.321,8.668 C131.321,6.822 129.774,5.356 127.766,5.356 L127.766,5.356 Z"
-                                id="location"
-                              ></path>
+                                id="location"></path>
                             </g>
                           </g>
                         </g>
                       </svg>
                     </div>
-                    <div
-                      class="Text-sc-1men39j-0 Text-n28ss1-0 DetailsText-fvgclz-6 PxDX gjIHaU dFFqgd"
-                    >
+                    <div class="Text-sc-1men39j-0 Text-n28ss1-0 DetailsText-fvgclz-6 PxDX gjIHaU dFFqgd">
                       {{ propsComponents.configuration.city }}
                       {{ propsComponents.configuration.postal_code }}
                     </div>
                   </div>
-                  <div
-                    class="View-sc-8b83af-0 DetailsItem-fvgclz-5 fAlNti gCQHbH"
-                  >
-                    <div
-                      class="View-sc-8b83af-0 IconCont-fvgclz-25 fAlNti KYCjT"
-                    >
-                      <svg
-                        width="19"
-                        height="24"
-                        viewBox="0 0 19 24"
-                        class="SvgIcon-b8yf1i-1 lcPmwa"
-                      >
-                        <path
-                          fill-rule="evenodd"
+                  <div class="View-sc-8b83af-0 DetailsItem-fvgclz-5 fAlNti gCQHbH">
+                    <div class="View-sc-8b83af-0 IconCont-fvgclz-25 fAlNti KYCjT">
+                      <svg width="19" height="24" viewBox="0 0 19 24" class="SvgIcon-b8yf1i-1 lcPmwa">
+                        <path fill-rule="evenodd"
                           d="M18.037 21.231c-.37.359-.739.715-1.109 1.069l-4.358-5.602c.365-.355.729-.704 1.092-1.057.361-.345.601-.596.932-.53a.728.728 0 0 1 .301.12c.113.078.222.232.33.371.159.202.318.408.477.613.712.918 1.423 1.828 2.135 2.744.153.195.306.392.453.585.096.123.203.244.257.364.058.134.079.27.083.399.008.367-.24.592-.593.924zm-1.966 1.739c-.304.145-.6.22-.899.27-.925.163-1.865.009-2.761-.285-.247-.081-.477-.194-.726-.284-.198-.075-.391-.176-.585-.274-.43-.231-.857-.485-1.29-.776-.412-.279-.804-.599-1.223-.924-.353-.274-.683-.612-1.035-.921-.125-.123-.254-.245-.381-.371-.189-.201-.386-.402-.582-.605-.206-.23-.418-.467-.627-.696a8.677 8.677 0 0 0-.177-.213c-.189-.223-.374-.446-.565-.669-.045-.062-.093-.118-.14-.182l-.536-.69c-.048-.064-.096-.122-.143-.188-.193-.264-.387-.526-.58-.794l-.492-.722-.3-.458c-.238-.434-.531-.829-.749-1.257-.07-.133-.145-.26-.217-.391-.209-.426-.441-.836-.62-1.255-.229-.536-.461-1.05-.628-1.578-.243-.768-.448-1.498-.557-2.25C.091 6.282.095 5.141.427 4.002c.09-.31.214-.61.385-.916.063-.111.124-.229.22-.33 1.491 1.912 2.976 3.819 4.463 5.731-.701.659-.206 1.598.181 2.357.16.31.388.61.565.932.076.115.155.229.231.346.123.178.246.357.374.538l.431.589c.054.065.102.127.153.194.106.131.209.267.315.399l.107.137c.148.177.295.349.445.521l.416.48c.105.112.207.227.311.338.339.313.636.689.965.985.662.576 1.462 1.482 2.197.771 1.448 1.862 2.896 3.726 4.348 5.588a1.51 1.51 0 0 1-.463.308zM7.007 7.027l-1.121 1.08C4.403 6.193 2.913 4.286 1.429 2.379c.371-.359.743-.72 1.116-1.077.349-.332.575-.577.897-.513.12.024.239.064.356.155.097.078.193.221.283.336l.499.644c.731.936 1.462 1.873 2.19 2.812.157.203.313.405.474.606.077.106.18.214.234.323.08.159.105.305.108.458.008.354-.239.578-.579.904z"
                           class="StyledPath-b8yf1i-0 cvqKtH"
-                          :style="`fill: ${propsComponents.configuration.colors.two}`"
-                        ></path>
+                          :style="`fill: ${propsComponents.configuration.colors.two}`"></path>
                       </svg>
                     </div>
-                    <div
-                      class="Text-sc-1men39j-0 Text-n28ss1-0 DetailsText-fvgclz-6 PxDX gjIHaU dFFqgd"
-                    >
+                    <div class="Text-sc-1men39j-0 Text-n28ss1-0 DetailsText-fvgclz-6 PxDX gjIHaU dFFqgd">
                       {{ propsComponents.configuration.phone_number }}
                     </div>
                   </div>
-                  <div
-                    class="View-sc-8b83af-0 DetailsItem-fvgclz-5 fAlNti gCQHbH"
-                  >
-                    <div
-                      class="View-sc-8b83af-0 IconCont-fvgclz-25 fAlNti KYCjT"
-                      :style="`fill: ${propsComponents.configuration.colors.two}`"
-                    >
-                      <svg
-                        width="24"
-                        height="19"
-                        viewBox="0 0 24 19"
-                        class="SvgIcon-sc-3sdvpr-1 huENIW"
-                      >
-                        <path
-                          fill-rule="evenodd"
+                  <div class="View-sc-8b83af-0 DetailsItem-fvgclz-5 fAlNti gCQHbH">
+                    <div class="View-sc-8b83af-0 IconCont-fvgclz-25 fAlNti KYCjT"
+                      :style="`fill: ${propsComponents.configuration.colors.two}`">
+                      <svg width="24" height="19" viewBox="0 0 24 19" class="SvgIcon-sc-3sdvpr-1 huENIW">
+                        <path fill-rule="evenodd"
                           d="M12.36 13.142L.861 2.402V.215h23.006v2.187L12.36 13.142zM.861 16.266V4.707L6.892 10.1.861 16.266zM23.866 4.707v11.56L17.833 10.1l6.033-5.393zM12.361 15.469l4.394-4.209 6.789 7.017H1.184l6.788-7.017 4.389 4.209z"
-                          class="StyledPath-sc-3sdvpr-0"
-                        ></path>
+                          class="StyledPath-sc-3sdvpr-0"></path>
                       </svg>
                     </div>
-                    <div
-                      class="Text-sc-1men39j-0 Text-n28ss1-0 DetailsText-fvgclz-6 PxDX gjIHaU dFFqgd"
-                    >
+                    <div class="Text-sc-1men39j-0 Text-n28ss1-0 DetailsText-fvgclz-6 PxDX gjIHaU dFFqgd">
                       {{ propsComponents.configuration.email }}
                     </div>
                   </div>
@@ -157,23 +82,14 @@ const propsComponents = defineProps<{
               </div>
             </div>
             <div class="Table-fvgclz-16 ixuQlm">
-              <div
-                width="950"
-                data-rbd-droppable-id="left"
-                data-rbd-droppable-context-id="0"
+              <div width="950" data-rbd-droppable-id="left" data-rbd-droppable-context-id="0"
                 class="LeftColumn-fvgclz-17 fhmDQj"
-                :style="`background-color: ${propsComponents.configuration.colors.three}`"
-              >
-                <div
-                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 iFZZvl kZOPfA"
-                >
-                  <div
-                    class="View-sc-8b83af-0 AvatarContainer-fvgclz-12 fAlNti cpCaBF"
-                  >
-                    <img
-                      :src="propsComponents.configuration.image"
-                      class="Image-w4yy09-0 Avatar-fvgclz-13 dydvxs bPKUkA"
-                    />
+                :style="`background-color: ${propsComponents.configuration.colors.three}`">
+                <div v-if="propsComponents.configuration.image"
+                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 iFZZvl kZOPfA">
+                  <div class="View-sc-8b83af-0 AvatarContainer-fvgclz-12 fAlNti cpCaBF">
+                    <img :src="propsComponents.configuration.image"
+                      class="Image-w4yy09-0 Avatar-fvgclz-13 dydvxs bPKUkA" />
                   </div>
                 </div>
                 <!-- <div class="View-sc-8b83af-0 IconCont-fvgclz-25 aller">
@@ -183,49 +99,28 @@ const propsComponents = defineProps<{
                   >
                     <img :src="icon" />
                   </template>
-                </div> -->
+</div> -->
 
-                <div
-                  data-rbd-draggable-context-id="0"
-                  data-rbd-draggable-id="d75d1101-5fa5-4882-9f82-2853d0b4e5d0"
-                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 iFZZvl kZOPfA"
-                  style="
+                <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="d75d1101-5fa5-4882-9f82-2853d0b4e5d0"
+                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 iFZZvl kZOPfA" style="
                     box-shadow: none;
                     border: 0px;
                     padding: 0px;
                     height: auto;
                     width: auto;
-                  "
-                >
-                  <div
-                    class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti cQbBRy eTvWcP"
-                  >
+                  ">
+                  <div class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti cQbBRy eTvWcP">
                     <div class="Text-sc-1men39j-0 Heading-fdlt8e-0 PxDX gZVFil">
                       COMPÉTENCES
                     </div>
-                    <div
-                      class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB"
-                    >
-                      <template
-                        v-for="skill in propsComponents.configuration.skills"
-                        :key="skill"
-                      >
-                        <div
-                          class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 iFZZvl ehGdLC"
-                        >
-                          <div
-                            class="View-sc-8b83af-0 Wrapper-nkn6y9-0 fAlNti kMzbun"
-                          >
-                            <div
-                              class="View-sc-8b83af-0 Container-nkn6y9-1 fAlNti gCzlor"
-                            >
-                              <div
-                                class="View-sc-8b83af-0 Decoration-nkn6y9-2 fAlNti leuCJC"
-                                :style="`background-color: ${propsComponents.configuration.colors.two}`"
-                              ></div>
-                              <div
-                                class="Text-sc-1men39j-0 Text-n28ss1-0 Text-nkn6y9-3 PxDX gjIHaU iiKwIS text-left"
-                              >
+                    <div class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB">
+                      <template v-for="skill in propsComponents.configuration.skills" :key="skill">
+                        <div class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 iFZZvl ehGdLC">
+                          <div class="View-sc-8b83af-0 Wrapper-nkn6y9-0 fAlNti kMzbun">
+                            <div class="View-sc-8b83af-0 Container-nkn6y9-1 fAlNti gCzlor">
+                              <div class="View-sc-8b83af-0 Decoration-nkn6y9-2 fAlNti leuCJC"
+                                :style="`background-color: ${propsComponents.configuration.colors.two}`"></div>
+                              <div class="Text-sc-1men39j-0 Text-n28ss1-0 Text-nkn6y9-3 PxDX gjIHaU iiKwIS text-left">
                                 {{ skill.name }}
                               </div>
                             </div>
@@ -236,147 +131,95 @@ const propsComponents = defineProps<{
                   </div>
                 </div>
 
-                <div
-                  data-rbd-draggable-context-id="0"
-                  data-rbd-draggable-id="939fc762-0314-4ccc-9daf-195d3d260432"
-                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 gQyFmb kZOPfA"
-                  style="
+                <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="939fc762-0314-4ccc-9daf-195d3d260432"
+                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 gQyFmb kZOPfA" style="
                     box-shadow: none;
                     border: 0px;
                     padding: 0px;
                     height: auto;
                     width: auto;
-                  "
-                >
-                  <div
-                    class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti cQbBRy ingunR"
-                  >
+                  ">
+                  <div class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti cQbBRy ingunR">
                     <div class="Text-sc-1men39j-0 Heading-fdlt8e-0 PxDX gZVFil">
                       FORMATIONS
                     </div>
 
-                    <div
-                      class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB"
-                    >
-                      <template
-                        v-for="formation in propsComponents.configuration
-                          .formations"
-                        :key="formation"
-                      >
-                        <div
-                          class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 gQyFmb jhwqAS"
-                        >
+                    <div class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB">
+                      <template v-for="formation in propsComponents.configuration
+                        .formations" :key="formation">
+                        <div class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 gQyFmb jhwqAS">
                           <div
-                            class="View-sc-8b83af-0 BlockNestedItem-d8icj2-0 NestedBlock-sc-1gpqjpb-4 fAlNti bwFrjN RnXzU"
-                          >
+                            class="View-sc-8b83af-0 BlockNestedItem-d8icj2-0 NestedBlock-sc-1gpqjpb-4 fAlNti bwFrjN RnXzU">
                             <div class="BreakAvoidWrapper-sc-31vbqh-0 ctaaOO">
                               <div
-                                class="Text-sc-1men39j-0 Heading-fdlt8e-0 SubHeading-sc-1a3p7dh-0 StyledSubHeading-sc-1gpqjpb-0 PxDX eLhXUb bnNFpD foJavr"
-                              >
+                                class="Text-sc-1men39j-0 Heading-fdlt8e-0 SubHeading-sc-1a3p7dh-0 StyledSubHeading-sc-1gpqjpb-0 PxDX eLhXUb bnNFpD foJavr">
                                 {{ formation.title }}
                               </div>
                               <div
                                 class="Text-sc-1men39j-0 Text-n28ss1-0 Text-sc-1gpqjpb-1 School-sc-1gpqjpb-2 PxDX gjIHaU HgiFH text-left"
-                                :style="`color: ${propsComponents.configuration.colors.two}`"
-                              >
-                                {{ formation.place }} / {{ formation.city }} /
-                                {{ formation.year }}
+                                :style="`color: ${propsComponents.configuration.colors.two}`">
+                                {{ [formation.place, formation.city, formation.year].join(' / ') }}
                               </div>
-                            </div>
-                            <div class="Description-sc-1gpqjpb-3 kUwWgn">
-                              <div class="ParsedTextContainer-sc-6nbsq0-0">
-                                <div class="UnbreakableView-g0hv7p-0 gQyFmb">
-                                  <div
-                                    class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU"
-                                  >
-                                    <div
-                                      class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU text-left"
-                                      style="
+                              <div class="Description-sc-1gpqjpb-3 kUwWgn">
+                                <div class="ParsedTextContainer-sc-6nbsq0-0">
+                                  <div class="UnbreakableView-g0hv7p-0 gQyFmb">
+                                    <div class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU">
+                                      <div class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU text-left" style="
                                         text-decoration: none;
                                         color: inherit;
-                                      "
-                                    >
-                                      {{ formation.description }}
+                                      ">
+                                        {{ formation.description }}
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="UnbreakableView-g0hv7p-0 gQyFmb">
-                                  <div
-                                    class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU"
-                                  >
-                                    <div
-                                      class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU text-left"
-                                      style="
+                                  <div class="UnbreakableView-g0hv7p-0 gQyFmb">
+                                    <div class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU">
+                                      <div class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU text-left" style="
                                         text-decoration: none;
                                         color: inherit;
-                                      "
-                                    >
-                                      {{ formation.level }}
+                                      ">
+                                        {{ formation.level }}
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
                       </template>
                     </div>
                   </div>
                 </div>
 
-                <div
-                  data-rbd-draggable-context-id="0"
-                  data-rbd-draggable-id="8469b53e-8a73-4523-acb6-b68f78010ce7"
-                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 gQyFmb kZOPfA"
-                  style="
+                <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="8469b53e-8a73-4523-acb6-b68f78010ce7"
+                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 gQyFmb kZOPfA" style="
                     box-shadow: none;
                     border: 0px;
                     padding: 0px;
                     height: auto;
                     width: auto;
-                  "
-                >
-                  <div
-                    class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti bqvGCc ingunR"
-                  >
-                    <div
-                      v-if="
-                        propsComponents.configuration.driving_licence === true
-                      "
-                      class="Text-sc-1men39j-0 Heading-fdlt8e-0 PxDX gZVFil"
-                    >
+                  ">
+                  <div class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti bqvGCc ingunR">
+                    <div v-if="
+                      propsComponents.configuration.driving_licence === true
+                    " class="Text-sc-1men39j-0 Heading-fdlt8e-0 PxDX gZVFil">
                       Permis B, Véhiculé
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                width="950"
-                data-rbd-droppable-id="right"
-                data-rbd-droppable-context-id="0"
-                class="RightColumn-fvgclz-18 liTozq"
-              >
-                <div
-                  class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 iFZZvl kZOPfA"
-                >
-                  <div
-                    class="View-sc-8b83af-0 SummaryContainer-fvgclz-14 fAlNti bHYPfM"
-                  >
-                    <div
-                      class="Text-sc-1men39j-0 Text-n28ss1-0 Summary-fvgclz-15 PxDX gjIHaU hyPhbj"
-                    >
+              <div width="950" data-rbd-droppable-id="right" data-rbd-droppable-context-id="0"
+                class="RightColumn-fvgclz-18 liTozq">
+                <div class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 iFZZvl kZOPfA">
+                  <div class="View-sc-8b83af-0 SummaryContainer-fvgclz-14 fAlNti bHYPfM">
+                    <div class="Text-sc-1men39j-0 Text-n28ss1-0 Summary-fvgclz-15 PxDX gjIHaU hyPhbj">
                       <div class="ParsedTextContainer-sc-6nbsq0-0">
                         <div class="UnbreakableView-g0hv7p-0 gQyFmb">
-                          <div
-                            class="Text-sc-1men39j-0 Text-n28ss1-0 Summary-fvgclz-15 PxDX gjIHaU hyPhbj"
-                          >
-                            <div
-                              class="Text-sc-1men39j-0 Text-n28ss1-0 Summary-fvgclz-15 PxDX gjIHaU hyPhbj"
-                            >
+                          <div class="Text-sc-1men39j-0 Text-n28ss1-0 Summary-fvgclz-15 PxDX gjIHaU hyPhbj">
+                            <div class="Text-sc-1men39j-0 Text-n28ss1-0 Summary-fvgclz-15 PxDX gjIHaU hyPhbj">
                               <div
                                 class="Text-sc-1men39j-0 Text-n28ss1-0 Summary-fvgclz-15 PxDX gjIHaU hyPhbj text-left"
-                                style="text-decoration: none; color: inherit"
-                              >
+                                style="text-decoration: none; color: inherit">
                                 {{ propsComponents.configuration.description }}
                               </div>
                             </div>
@@ -385,88 +228,54 @@ const propsComponents = defineProps<{
                       </div>
                     </div>
                   </div>
-                  <div
-                    data-rbd-draggable-context-id="0"
-                    data-rbd-draggable-id="bd736268-efea-4da1-b813-3628b6a50eae"
-                    class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 gQyFmb kZOPfA"
-                    style="
+                  <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="bd736268-efea-4da1-b813-3628b6a50eae"
+                    class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 gQyFmb kZOPfA" style="
                       box-shadow: none;
                       border: 0px;
                       padding: 0px;
                       height: auto;
                       width: auto;
-                    "
-                  >
-                    <div
-                      class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti kOTXoc ingunR"
-                    >
-                      <div
-                        class="Text-sc-1men39j-0 Heading-fdlt8e-0 PxDX eLhXUb"
-                      >
+                    ">
+                    <div class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti kOTXoc ingunR">
+                      <div class="Text-sc-1men39j-0 Heading-fdlt8e-0 PxDX eLhXUb">
                         EXPÉRIENCES PROFESSIONNELLES
                       </div>
-                      <div
-                        class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB"
-                      >
-                        <template
-                          v-for="experience in propsComponents.configuration
-                            .experiences"
-                          :key="experience.title"
-                        >
-                          <div
-                            class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 gQyFmb jhwqAS"
-                          >
-                            <div
-                              class="BreakAvoidWrapper-sc-31vbqh-0 Wrapper-sc-3wzo5k-5 ctaaOO hWKISx"
-                            >
+                      <div class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB">
+                        <template v-for="experience in propsComponents.configuration
+                          .experiences" :key="experience.title">
+                          <div class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 gQyFmb jhwqAS">
+                            <div class="BreakAvoidWrapper-sc-31vbqh-0 Wrapper-sc-3wzo5k-5 ctaaOO hWKISx">
                               <div class="Column-sc-3wzo5k-6 dItcKI">
                                 <div
-                                  class="Text-sc-1men39j-0 Text-n28ss1-0 Employer-sc-3wzo5k-3 StyledText-sc-3wzo5k-7 PxDX gjIHaU jnZfmN jxCRvk text-left"
-                                >
-                                  {{ experience.place }}&nbsp;-&nbsp;{{
-                                    experience.city
-                                  }}
+                                  class="Text-sc-1men39j-0 Text-n28ss1-0 Employer-sc-3wzo5k-3 StyledText-sc-3wzo5k-7 PxDX gjIHaU jnZfmN jxCRvk text-left">
+                                  {{ [experience.place, experience.city].join(' - ') }}
                                 </div>
                                 <div class="SpaceWrapper-sc-3wzo5k-8 iXnHaz">
                                   <div
                                     class="Text-sc-1men39j-0 Text-n28ss1-0 DateComp-sc-1hqshvs-0 PxDX gjIHaU fcBLqD text-left"
-                                    :style="`color: ${propsComponents.configuration.colors.two}`"
-                                  >
-                                    {{ experience.start }}&nbsp;-&nbsp;{{
-                                      experience.end
-                                    }}
+                                    :style="`color: ${propsComponents.configuration.colors.two}`">
+                                    {{ [experience.start, experience.end].join(' - ') }}
                                   </div>
                                   <div
                                     class="Text-sc-1men39j-0 Text-n28ss1-0 Employer-sc-3wzo5k-3 StyledText-sc-3wzo5k-7 Devider-sc-3wzo5k-9 PxDX gjIHaU jnZfmN fbuwqy fdbOqK"
-                                    :style="`color: ${propsComponents.configuration.colors.two}`"
-                                  >
+                                    :style="`color: ${propsComponents.configuration.colors.two}`">
                                     &nbsp;-&nbsp;
                                   </div>
                                 </div>
                               </div>
-                              <div
-                                class="Column-sc-3wzo5k-6 kOsFsO riga-border"
-                              >
+                              <div class="Column-sc-3wzo5k-6 kOsFsO riga-border">
                                 <div
-                                  class="Text-sc-1men39j-0 Heading-fdlt8e-0 SubHeading-sc-1a3p7dh-0 StyledSubHeading-sc-3wzo5k-0 PxDX eLhXUb bnNFpD fzjNZj"
-                                >
+                                  class="Text-sc-1men39j-0 Heading-fdlt8e-0 SubHeading-sc-1a3p7dh-0 StyledSubHeading-sc-3wzo5k-0 PxDX eLhXUb bnNFpD fzjNZj">
                                   {{ experience.title }}
                                 </div>
                                 <div class="TextCont-sc-3wzo5k-1 fCKCoN">
                                   <div class="ParsedTextContainer-sc-6nbsq0-0">
-                                    <div
-                                      class="UnbreakableView-g0hv7p-0 gQyFmb"
-                                    >
-                                      <div
-                                        class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU"
-                                      >
-                                        <div
-                                          class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU text-left"
-                                          style="
+                                    <div class="UnbreakableView-g0hv7p-0 gQyFmb">
+                                      <div class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU">
+                                        <div class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU text-left" style="
                                             text-decoration: none;
                                             color: inherit;
-                                          "
-                                        >
+                                          ">
                                           {{ experience.description }}
                                         </div>
                                       </div>
@@ -480,60 +289,36 @@ const propsComponents = defineProps<{
                       </div>
                     </div>
                   </div>
-                  <div
-                    data-rbd-draggable-context-id="0"
-                    data-rbd-draggable-id="34eb55c6-fddc-4e41-bc60-874cd6c447bb"
-                    class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 gQyFmb kZOPfA"
-                    style="
+                  <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="34eb55c6-fddc-4e41-bc60-874cd6c447bb"
+                    class="UnbreakableView-g0hv7p-0 StyledUnbreakableSection-fvgclz-21 gQyFmb kZOPfA" style="
                       box-shadow: none;
                       border: 0px;
                       padding: 0px;
                       height: auto;
                       width: auto;
-                    "
-                  >
-                    <div
-                      class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti kOTXoc ingunR"
-                    >
-                      <div
-                        class="Text-sc-1men39j-0 Heading-fdlt8e-0 PxDX eLhXUb"
-                      >
+                    ">
+                    <div v-if="propsComponents.configuration.hobbies.length > 0"
+                      class="View-sc-8b83af-0 BlockItem-ermvs4-0 StyledBlockItem-fvgclz-22 fAlNti kOTXoc ingunR">
+                      <div class="Text-sc-1men39j-0 Heading-fdlt8e-0 PxDX eLhXUb">
                         Centres d'intérêt
                       </div>
-                      <div
-                        class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB"
-                      >
-                        <template
-                          v-for="hobby in propsComponents.configuration.hobbies"
-                          :key="hobby.title"
-                        >
-                          <div
-                            class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 gQyFmb jhwqAS"
-                          >
-                            <div
-                              class="BreakAvoidWrapper-sc-31vbqh-0 Wrapper-sc-3wzo5k-5 ctaaOO hWKISx"
-                            >
+                      <div class="View-sc-8b83af-0 StyledView-fvgclz-0 fAlNti PfvnB">
+                        <template v-for="hobby in propsComponents.configuration.hobbies" :key="hobby.title">
+                          <div class="UnbreakableView-g0hv7p-0 UnbreakableBlockInner-fvgclz-24 gQyFmb jhwqAS">
+                            <div class="BreakAvoidWrapper-sc-31vbqh-0 Wrapper-sc-3wzo5k-5 ctaaOO hWKISx">
                               <div>
                                 <div
-                                  class="Text-sc-1men39j-0 Heading-fdlt8e-0 SubHeading-sc-1a3p7dh-0 StyledSubHeading-sc-3wzo5k-0 PxDX eLhXUb bnNFpD fzjNZj"
-                                >
+                                  class="Text-sc-1men39j-0 Heading-fdlt8e-0 SubHeading-sc-1a3p7dh-0 StyledSubHeading-sc-3wzo5k-0 PxDX eLhXUb bnNFpD fzjNZj">
                                   - {{ hobby.title }}
                                 </div>
                                 <div class="TextCont-sc-3wzo5k-1 fCKCoN">
                                   <div class="ParsedTextContainer-sc-6nbsq0-0">
-                                    <div
-                                      class="UnbreakableView-g0hv7p-0 gQyFmb"
-                                    >
-                                      <div
-                                        class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU"
-                                      >
-                                        <div
-                                          class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU text-left"
-                                          style="
+                                    <div class="UnbreakableView-g0hv7p-0 gQyFmb">
+                                      <div class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU">
+                                        <div class="Text-sc-1men39j-0 Text-n28ss1-0 PxDX gjIHaU text-left" style="
                                             text-decoration: none;
                                             color: inherit;
-                                          "
-                                        >
+                                          ">
                                           {{ hobby.description }}
                                         </div>
                                       </div>
@@ -560,8 +345,10 @@ const propsComponents = defineProps<{
 <style scoped>
 body {
   margin: 0;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 body::-webkit-scrollbar {
@@ -1177,11 +964,11 @@ p {
   transform: translateY(-30%);
 }
 
-.csMki svg > path {
+.csMki svg>path {
   stroke: rgb(0, 153, 218);
 }
 
-.csMki svg > path {
+.csMki svg>path {
   stroke: rgb(0, 153, 218) !important;
 }
 
@@ -1271,53 +1058,53 @@ p {
   color: rgb(0, 153, 218);
 }
 
-.gfYfZD > div:first-child {
+.gfYfZD>div:first-child {
   color: rgb(255, 255, 255);
 }
 
-.gfYfZD > div:first-child p:hover {
+.gfYfZD>div:first-child p:hover {
   color: rgb(255, 255, 255);
 }
 
-.gfYfZD > div:first-child span {
+.gfYfZD>div:first-child span {
   border: 2px solid rgb(255, 255, 255);
 }
 
-.gfYfZD > div:first-child > div,
-.gfYfZD > div:last-child > div > div {
+.gfYfZD>div:first-child>div,
+.gfYfZD>div:last-child>div>div {
   border-radius: 3px;
   background: rgb(25, 30, 45);
 }
 
-.gfYfZD > div:last-child > div p:hover {
+.gfYfZD>div:last-child>div p:hover {
   color: rgb(255, 255, 255);
 }
 
-.gfYfZD > div:last-child > div svg {
+.gfYfZD>div:last-child>div svg {
   fill: transparent;
 }
 
-.gfYfZD > div:last-child > div svg > path {
+.gfYfZD>div:last-child>div svg>path {
   stroke: rgb(255, 255, 255);
 }
 
-.gfYfZD > div:last-child > div > div {
+.gfYfZD>div:last-child>div>div {
   padding: 10px;
   width: 200px;
 }
 
-.gfYfZD > div:last-child > div > div::-webkit-scrollbar {
+.gfYfZD>div:last-child>div>div::-webkit-scrollbar {
   width: 13px;
 }
 
-.gfYfZD > div:last-child > div > div::-webkit-scrollbar-thumb {
+.gfYfZD>div:last-child>div>div::-webkit-scrollbar-thumb {
   border: 5px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
   border-radius: 7px;
   background-color: rgb(53, 66, 90);
 }
 
-.gfYfZD > div:last-child button {
+.gfYfZD>div:last-child button {
   width: 175px;
   font-family: 'Gilroy Medium';
   font-size: 16px;
@@ -1328,7 +1115,7 @@ p {
   border-radius: 3px;
 }
 
-.gfYfZD > div:last-child button:hover {
+.gfYfZD>div:last-child button:hover {
   background: rgb(34, 150, 243);
 }
 
@@ -1339,12 +1126,12 @@ p {
   flex-direction: row;
 }
 
-.eWvGEL > div:first-child {
+.eWvGEL>div:first-child {
   background: rgb(34, 150, 243);
 }
 
-.eWvGEL > div:first-child:hover,
-.eWvGEL > div:first-child:active {
+.eWvGEL>div:first-child:hover,
+.eWvGEL>div:first-child:active {
   background-color: rgb(34, 150, 243);
   border-color: rgb(34, 150, 243);
 }
@@ -1384,7 +1171,7 @@ p {
   color: rgb(0, 153, 218);
 }
 
-.lPXta:hover svg > g > path {
+.lPXta:hover svg>g>path {
   fill: rgb(0, 153, 218);
 }
 
@@ -1406,7 +1193,7 @@ p {
   margin-bottom: 58.4383px;
 }
 
-.bqvGCc > div:first-child {
+.bqvGCc>div:first-child {
   margin-bottom: 35.063px;
 }
 
@@ -1418,7 +1205,7 @@ p {
   margin-bottom: 58.4383px;
 }
 
-.kOTXoc > div:first-child {
+.kOTXoc>div:first-child {
   margin-bottom: 35.063px;
 }
 
@@ -1652,6 +1439,7 @@ p {
 
 .gWVUHA {
   padding: 46.7506px 46.7506px 0px;
+  padding-top: 35px;
   z-index: 2;
 }
 
@@ -1665,7 +1453,7 @@ p {
 .ibsdMc {
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: 37.4005px;
+  margin-bottom: 30px;
   margin-top: 22.2065px;
   display: flex;
 }
@@ -1694,13 +1482,13 @@ p {
 
 .fAqTNX {
   color: rgb(255, 255, 255);
-  font-size: 52.5945px;
+  font-size: 35px;
   text-align: center;
   line-height: 1;
   letter-spacing: 10.5189px;
   border: none;
   padding: 0px;
-  margin-bottom: 19.869px;
+  margin-bottom: 20px;
 }
 
 .kJwFCM {
@@ -1790,11 +1578,11 @@ p {
   cursor: unset !important;
 }
 
-.kZOPfA:first-child > div {
+.kZOPfA:first-child>div {
   padding-top: 0px;
 }
 
-.kZOPfA:first-child > div > div:first-child {
+.kZOPfA:first-child>div>div:first-child {
   border-top-color: rgb(51, 62, 80);
 }
 
@@ -1806,11 +1594,11 @@ p {
   break-inside: auto !important;
 }
 
-.ingunR > div:first-child {
+.ingunR>div:first-child {
   margin-bottom: 0px;
 }
 
-.ingunR > div:nth-child(2) {
+.ingunR>div:nth-child(2) {
   display: block;
 }
 
@@ -1822,11 +1610,11 @@ p {
   break-inside: avoid;
 }
 
-.eTvWcP > div:first-child {
+.eTvWcP>div:first-child {
   margin-bottom: 0px;
 }
 
-.eTvWcP > div:nth-child(2) {
+.eTvWcP>div:nth-child(2) {
   display: block;
 }
 
@@ -1838,7 +1626,7 @@ p {
   padding-top: 29.2191px;
 }
 
-.jhwqAS:last-child > div {
+.jhwqAS:last-child>div {
   margin-bottom: 0px;
 }
 
@@ -1854,7 +1642,7 @@ p {
   padding-top: 29.2191px;
 }
 
-.ehGdLC:last-child > div {
+.ehGdLC:last-child>div {
   margin-bottom: 0px;
 }
 
@@ -1868,7 +1656,7 @@ p {
   display: flex;
 }
 
-.aller > img {
+.aller>img {
   width: 30px;
   height: 30px;
   margin-right: 5px;
@@ -1883,6 +1671,7 @@ p {
   align-items: center;
   display: flex;
 }
+
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
